@@ -27,7 +27,7 @@ app.post('/api/fileanalyse', (req, res) => {
       //console.log(`File [${name}] got ${data.length} bytes`);
       totalSize += data.length ;
     }).on('close', () => {
-      res.json({name: name, type: mimeType, size: totalSize})
+      res.json({name: filename, type: mimeType, size: totalSize})
       //console.log(`File [${name}] done`);
     });
   });
